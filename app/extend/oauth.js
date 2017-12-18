@@ -73,7 +73,10 @@ module.exports = app => {
     }
     async getAuthorizationCode(authorizationCode) {
       try {
-        const authCode = await this.ctx.model.AuthorizationCode.queryAuthorizationCode(authorizationCode)
+        console.log('authorizationCode: ', authorizationCode)
+        const authCode = await this.ctx.model.AuthorizationCode.queryAuthorizationCode({
+          code: authorizationCode
+        })
         if (!authCode) return
         const user = await this.ctx.model.User.queryUser({ id: authCode.userId })
         if (!user) return

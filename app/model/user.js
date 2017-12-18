@@ -36,6 +36,7 @@ module.exports = app => {
       where: { name: name },
       attributes: ['id', 'name', 'age', 'firstname', 'lastname', 'hashedPassword']
     });
+    if (!user) return null;
     return bcrypt.compareSync(password, user.hashedPassword) ? (delete user.dataValues.hashedPassword && user) : null;
   };
 
