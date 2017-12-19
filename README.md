@@ -31,6 +31,22 @@ $ npm stop
 
 ### 测试图片
 
+下面是code模板测试的完整流程：
+
+![](https://raw.githubusercontent.com/caiya/imgs/c369910fbff2422fa6a705b4208907bdc1dd2334/%E5%AD%90%E7%B3%BB%E7%BB%9F%E7%99%BB%E5%BD%95.jpg)
+
+然后是点击登录按钮进行跳转：
+
+![](https://raw.githubusercontent.com/caiya/imgs/c369910fbff2422fa6a705b4208907bdc1dd2334/oAuth%E7%BB%9F%E4%B8%80%E7%99%BB%E5%BD%95%E9%A1%B5.jpg)
+
+注意：跳转过去携带了client_id等信息，然后是oAuth登录授权：
+
+![](https://raw.githubusercontent.com/caiya/imgs/c369910fbff2422fa6a705b4208907bdc1dd2334/oAuth%E7%BB%9F%E4%B8%80%E7%99%BB%E5%BD%95%E9%A1%B5.jpg)
+
+最后是授权成功，回跳回来子系统指定的回调地址：
+
+![](https://raw.githubusercontent.com/caiya/imgs/c369910fbff2422fa6a705b4208907bdc1dd2334/oAuth%E7%99%BB%E5%BD%95%E6%88%90%E5%8A%9F%E8%BF%94%E5%9B%9E.jpg)
+
 ![](https://raw.githubusercontent.com/caiya/imgs/8850b1b9e336d3774cf924cf8611267db95442e2/%E7%94%A8%E6%88%B7%E5%8F%8Aclient%E6%B3%A8%E5%86%8C.png)
 
 ![](https://raw.githubusercontent.com/caiya/imgs/8850b1b9e336d3774cf924cf8611267db95442e2/%E4%BD%BF%E7%94%A8password%E6%A8%A1%E5%BC%8F%E8%8E%B7%E5%8F%96access_token.png)
