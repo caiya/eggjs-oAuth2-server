@@ -11,11 +11,6 @@ module.exports = appInfo => {
         '.html': 'nunjucks',
       },
     },
-    robot: {
-      ua: [
-        /Baiduspider/i,
-      ],
-    },
     oAuth2Server: {
       debug: true,
       grants: ['password', 'authorization_code', 'refresh_token']
@@ -30,7 +25,6 @@ module.exports = appInfo => {
     },
     security: {
       csrf: {
-        // ignoreJSON: true,
         enable: false
       }
     }
@@ -40,9 +34,7 @@ module.exports = appInfo => {
   config.keys = appInfo.name + '_1513142797863_8350';
 
   // add your config here
-  config.middleware = [
-    'robot',
-  ];
+  config.middleware = [];
 
   return config;
 };
