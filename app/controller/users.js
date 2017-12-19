@@ -18,12 +18,19 @@ class UsersController extends Controller {
       lastname: 'zhou',
     });
     const client = await this.ctx.model.Client.add({
-      clientId: '111',
-      clientSecret: '222', 
-      redirectUri: 'http://127.0.0.1:7001/',
+      clientId: 'hyewfbgawd',
+      clientSecret: 'fskefgtarwdbawydrawpdpaiuiawdtg', 
+      redirectUri: 'http://127.0.0.1:7002/auth/redirect',
       grants: 'password,authorization_code,refresh_token'
     });
     this.ctx.body = {user, client};
+  }
+
+  // 登录页
+  async authorize() {
+    const query = this.ctx.querystring
+    console.log('query: ', query)
+    await this.ctx.render('oauth/login.html', {query: query})
   }
 
   async authenticate() {
